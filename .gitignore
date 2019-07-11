@@ -1,0 +1,7 @@
+dist/*
+
+# Never ignore .gitkeep files
+!.gitkeep
+
+# Always ignore
+node_modules/*
