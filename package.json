@@ -1,25 +1,18 @@
 {
-  "name": "babel-plugin-usage",
+  "name": "babel-7.8.0-usage",
   "version": "0.1.0",
-  "description": "Learn how to use Babel plugins :)",
+  "description": "Learn how to use ECMAScript2020 features with Babel 7.8.0",
   "main": "index.js",
   "scripts": {
-    "compile:arrow-functions": "babel index.js --out-file dist/script.arrow-functions.js --plugins=@babel/plugin-transform-arrow-functions --retain-lines",
-    "compile:destructuring": "babel index.js --out-file dist/script.destructuring.js --plugins=@babel/plugin-transform-destructuring --retain-lines",
-    "compile:shorthand-properties": "babel index.js --out-file dist/script.shorthand-properties.js --plugins=@babel/plugin-transform-shorthand-properties --retain-lines",
-    "compile:spread": "babel index.js --out-file dist/script.spread.js --plugins=@babel/plugin-transform-spread --retain-lines",
-    "start": "npm-run-all compile:*",
+    "compile": "babel index.js --out-file dist/bundle.js --retain-lines",
+    "start": "npm run compile && node dist/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sean Kennedy",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "7.5.0",
-    "@babel/core": "7.5.4",
-    "@babel/plugin-transform-arrow-functions": "7.2.0",
-    "@babel/plugin-transform-destructuring": "7.5.0",
-    "@babel/plugin-transform-shorthand-properties": "7.2.0",
-    "@babel/plugin-transform-spread": "7.2.2",
-    "npm-run-all": "4.1.5"
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.8.3"
   }
 }

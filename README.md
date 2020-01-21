@@ -1,4 +1,6 @@
-# Babel Plugin Usage
+# Babel 7.8.0 Usage
+
+ECMAscript2020
 
 ## Running the script
 
