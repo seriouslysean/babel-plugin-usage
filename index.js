@@ -4,7 +4,7 @@ function logFeature(title, message, ...args) {
         console.log(`${message}: `);
     }
     console.log(...args);
-    console.log("\n\n");
+    console.log(); // Blank line
 }
 
 // Arrow Functions
@@ -30,7 +30,8 @@ const letterObj = { a, b, c };
 logFeature('Shorthand Properties', 'a, b, c, letterObj', a, b, c, letterObj);
 
 // Spread Syntax / Sprwad Operator
-// Allows creating copies of object with new or updated values, functions similarly to Object.assign(object1, object2)
+// Allows creating copies of object with new or updated values
+// functions similarly to Object.assign(object1, object2)
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 const letterArr1 = ['A'];
 const letterArr2 = ['B', 'C'];
@@ -41,7 +42,8 @@ const letterArr3 = [
 logFeature('Spread Syntax', 'letterArr1, letterArr2, letterArr3', letterArr1, letterArr2, letterArr3);
 
 // Nullish Colescing Operator
-// A logical operator that returns the right side of the operation if the left is undefined or null. Similar in usage to OR ||
+// A logical operator that returns the right side of the operation if the left is undefined
+// or null. Similar in usage to OR ||
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 const zeroName = 0 ?? 'Anonymous (Zero)';
 const falseName = false ?? 'Anonymous (False)';
@@ -71,6 +73,7 @@ const catLegs = animals.cat.legs;
 const dogLegs = animals.dog?.legs;
 const horseFood = animals.horse.favoriteFood?.[0];
 // Not something we should do, use invoke instead
-// This will return undefined but we don't know if it's from the actual function call or the lack of a function
+// This will return undefined but we don't know if it's from the actual function call
+// or the lack of a function
 const getTotalLegs = animals.methods.getTotalLegs?.();
 logFeature('Optional Chaining Operator', 'catLegs, dogLegs, horseFood, getTotalLegs', catLegs, dogLegs, horseFood, getTotalLegs);
