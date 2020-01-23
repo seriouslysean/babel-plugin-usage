@@ -29,7 +29,7 @@ const c = 'C';
 const letterObj = { a, b, c };
 logFeature('Shorthand Properties', 'a, b, c, letterObj', a, b, c, letterObj);
 
-// Spread Syntax / Sprwad Operator
+// Spread Syntax / Spread Operator
 // Allows creating copies of object with new or updated values
 // functions similarly to Object.assign(object1, object2)
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
